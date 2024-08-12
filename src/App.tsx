@@ -3,7 +3,7 @@ import Contact from './pages/Contact'
 
 function App() {
   return (
-    <main>
+    <main className='flex flex-col h-screen'>
       <Header />
       <Contact />
     </main>
