@@ -2,6 +2,7 @@ import { Header } from './components'
 import Contact from './pages/Contact'
 import Graphs from './pages/Graphs'
 import CreateContact from './pages/CreateContact'
+import ContactDetail from './pages/ContactDetail'
 import { Routes, Route, Navigate } from 'react-router-dom'
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
         <Route path='/contact' element={<Contact />} />
         <Route path='/graphs' element={<Graphs />} />
         <Route path='/contact/new' element={<CreateContact />} />
+        <Route path='/contact/:id' element={<ContactDetail />} />
       </Routes>
     </main>
   )

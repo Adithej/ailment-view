@@ -34,7 +34,6 @@ const Button: React.FC<ButtonProps> = props => {
     children,
     primary,
     secondary,
-    success,
     warning,
     danger,
     outline,
@@ -50,14 +49,14 @@ const Button: React.FC<ButtonProps> = props => {
         primary,
       'border-stone-200 font-palanquin bg-neutral-400 text-white px-5 py-4 hover:bg-neutral-500':
         secondary,
-      'border-green-500 bg-green-500 text-white': success,
-      'border-yellow-400 bg-yellow-400 text-white': warning,
-      'border-red-500 bg-red-500 text-white': danger,
+      'bg-yellow-600 hover:bg-yellow-700 text-white rounded transition duration-300 font-palanquin':
+        warning,
+      'bg-red-600 hover:bg-red-700 text-white rounded transition duration-300 font-palanquin':
+        danger,
       'rounded-full': rounded,
       'bg-white': outline,
       'text-blue-500': outline && primary,
       'text-gray-900': outline && secondary,
-      'text-green-500': outline && success,
       'text-yellow-400': outline && warning,
       'text-red-500': outline && danger,
     },

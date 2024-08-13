@@ -1,4 +1,4 @@
-import { Sidebar, ContactCard } from '../components'
+import { Sidebar, ContactCard, ContactList } from '../components'
 
 const Contact = () => {
   return (
@@ -6,8 +6,9 @@ const Contact = () => {
       <section>
         <Sidebar />
       </section>
-      <section className='bg-stone-300 flex flex-col pl-[10%] pt-6'>
+      <section className='bg-stone-300 flex flex-col pl-[10%] pt-6 gap-8'>
         <ContactCard />
+        <ContactList />
       </section>
     </main>
   )
