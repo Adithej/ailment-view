@@ -86,10 +86,6 @@ Country specific data for map used for react leaflet :
 
 https://disease.sh/v3/covid-19/countries
 
-```
-
-```
-
 ### Page Routes:
 
 ```
