@@ -7,11 +7,20 @@ Preview the project
 
 ### Contact Page:
 
+<img width="1434" alt="contact page" src="https://github.com/user-attachments/assets/3d8bd980-35bd-4aef-b089-ef138d7c1648">
+
+
 ### Create Contact Page
+
+<img width="1434" alt="create contact" src="https://github.com/user-attachments/assets/1ed65626-b4f3-4e95-a7fe-b466409679a0">
 
 ### Individual User Contact Page
 
+<img width="1434" alt="edit contact" src="https://github.com/user-attachments/assets/988c06f0-1303-40a2-aa51-ee1fa3063d49">
+
 ### Graphs Page
+
+<img width="1434" alt="graph page" src="https://github.com/user-attachments/assets/58ceec6c-7729-4e25-a0ad-2206035faffe">
 
 ## Run Locally
 
