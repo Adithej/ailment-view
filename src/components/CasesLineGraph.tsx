@@ -1,3 +1,4 @@
+import LodingImage from '../assets/Loading.svg'
 import { useQuery } from '@tanstack/react-query'
 import {
   getCasesWithDates,
@@ -14,9 +15,15 @@ import {
   ResponsiveContainer,
   Legend,
 } from 'recharts'
+import Card from './ui/Card'
 
 const CasesLineGraph: React.FC = () => {
-  const { data: casesData, status: casesStatus } = useQuery({
+  const {
+    data: casesData,
+    status: casesStatus,
+    isLoading,
+    isError,
+  } = useQuery({
     queryKey: ['casesByDate'],
     queryFn: getCasesWithDates,
   })
@@ -37,6 +44,14 @@ const CasesLineGraph: React.FC = () => {
       return `${Math.round(value / 1_000_000)}M`
     }
     return value.toString()
+  }
+
+  if (isLoading) {
+    return <Card image={LodingImage} content='Loding...' />
+  }
+
+  if (isError) {
+    return <Card image={LodingImage} content='Error Fetching Data' />
   }
 
   return (
