@@ -19,6 +19,7 @@ import Card from './ui/Card'
 
 const CasesLineGraph: React.FC = () => {
   const {
+    // query for cases with dates
     data: casesData,
     status: casesStatus,
     isLoading,
@@ -29,6 +30,7 @@ const CasesLineGraph: React.FC = () => {
   })
 
   const { data: casesAll, status: casesAllStatus } = useQuery({
+    // query for global cases
     queryKey: ['allCases'],
     queryFn: getAllGlobalCases,
   })
@@ -40,6 +42,7 @@ const CasesLineGraph: React.FC = () => {
   }
 
   const NumberToM = (value: number) => {
+    // convert bigger num to M - million values
     if (value >= 1_000_000) {
       return `${Math.round(value / 1_000_000)}M`
     }

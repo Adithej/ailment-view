@@ -14,6 +14,7 @@ const markerIcon = new L.Icon({
 })
 
 const CasesWorldMap = () => {
+  // query for country wise cases
   const {
     data: countriesData,
     isLoading,

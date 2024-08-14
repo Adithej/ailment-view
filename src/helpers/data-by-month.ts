@@ -1,5 +1,6 @@
 import { CaseData } from "./types/type"
 
+// convert data to smaller readable form
 export const aggregateDataByMonth = (data: Record<string, number>): CaseData[] => {
     const aggregatedData: Record<string, number> = {};
   
