@@ -59,15 +59,10 @@ const ContactForm: React.FC = () => {
   }
 
   return (
-    <div className='w-[70%] h-[80%] p-5 bg-neutral-200 shadow-lg rounded-lg overflow-auto flex flex-col'>
+    <div className='w-[70%] h-[85%] p-5 bg-neutral-200 shadow-lg rounded-lg overflow-auto flex flex-col'>
       <div className='flex justify-between'>
         <h1 className='text-2xl font-palanquin font-bold mb-4'>Add Details</h1>
-        <Button
-          primary
-          outline
-          className='px-3'
-          onClick={() => navigate('/contact')}
-        >
+        <Button primary className='px-3' onClick={() => navigate('/contact')}>
           <FaChevronLeft size={25} />
         </Button>
       </div>
