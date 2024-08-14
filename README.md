@@ -2,13 +2,11 @@
 
 ## Build with React+TypeScipt.js, Tailwind CSS, TanStack Query, Redux, React Router and Recharts
 
-Preview the project
-[Ailment View](https://github.com/facebook/create-react-app).
+Preview the project [Ailment View](https://ailment-view.vercel.app).
 
 ### Contact Page:
 
 <img width="1434" alt="contact page" src="https://github.com/user-attachments/assets/3d8bd980-35bd-4aef-b089-ef138d7c1648">
-
 
 ### Create Contact Page
 
