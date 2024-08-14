@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { FaChevronLeft } from 'react-icons/fa'
 import { Sidebar } from '../components'
 import Button from '../components/ui/Button'
 import { useSelector, useDispatch } from 'react-redux'
@@ -71,14 +72,24 @@ const ContactDetail: React.FC = () => {
 
   return (
     <main className='flex-grow grid grid-cols-1 md:grid-cols-[15%_85%] h-dvh'>
-      <section>
+      <section className='hidden md:block'>
         <Sidebar />
       </section>
       <section className='bg-stone-300 flex flex-col pl-[10%] pt-6'>
-        <div className='w-[70%] h-[80%] p-5 bg-neutral-200 shadow-lg rounded-lg overflow-hidden flex flex-col'>
-          <h1 className='text-2xl font-palanquin font-bold mb-4'>
-            Edit Details
-          </h1>
+        <div className='w-[70%] h-[80%] p-5 bg-neutral-200 shadow-lg rounded-lg overflow-auto flex flex-col'>
+          <div className='flex justify-between'>
+            <h1 className='text-2xl font-palanquin font-bold mb-4'>
+              Edit Details
+            </h1>
+            <Button
+              primary
+              outline
+              className='px-3'
+              onClick={() => navigate('/contact')}
+            >
+              <FaChevronLeft size={25} />
+            </Button>
+          </div>
           <form
             onSubmit={handleUpdate}
             className='flex flex-col gap-4 font-montserrat'

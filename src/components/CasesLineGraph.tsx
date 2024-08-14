@@ -55,10 +55,10 @@ const CasesLineGraph: React.FC = () => {
   }
 
   return (
-    <div className='w-full h-full bg-neutral-200 font-palanquin shadow-lg rounded-lg overflow-auto flex flex-col p-5'>
-      <div className='flex justify-between text-neutral-700'>
+    <div className='w-full h-full bg-neutral-200 font-palanquin shadow-lg rounded-lg overflow-auto flex flex-col p-4 md:p-5'>
+      <div className='flex justify-between text-neutral-700 text-sm md:text-base'>
         <h3 className='font-bold text-lg'>Cases Fluctuations Global</h3>
-        <div className='flex gap-4'>
+        <div className='flex flex-wrap md:gap-4'>
           <span>
             All Cases :{' '}
             {casesAllStatus === 'success'

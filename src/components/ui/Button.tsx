@@ -55,7 +55,7 @@ const Button: React.FC<ButtonProps> = props => {
         danger,
       'rounded-full': rounded,
       'bg-white': outline,
-      'text-blue-500': outline && primary,
+      'text-slate-50': outline && primary,
       'text-gray-900': outline && secondary,
       'text-yellow-400': outline && warning,
       'text-red-500': outline && danger,

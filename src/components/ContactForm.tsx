@@ -2,8 +2,11 @@ import Button from './ui/Button'
 import { addContact } from '../store/slices/ContactSlice'
 import { useDispatch } from 'react-redux'
 import { useState } from 'react'
+import { FaChevronLeft } from 'react-icons/fa'
+import { useNavigate } from 'react-router-dom'
 
 const ContactForm: React.FC = () => {
+  const navigate = useNavigate()
   const dispatch = useDispatch()
 
   const [formData, setFormData] = useState({
@@ -17,6 +20,8 @@ const ContactForm: React.FC = () => {
     active: '',
   })
 
+  const [alert, setAlert] = useState<string>('')
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>,
   ) => {
@@ -29,12 +34,15 @@ const ContactForm: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
+    if (!formData.name || !formData.email) {
+      setAlert('Name and Email are required fields!')
+      return
+    }
     const newContact = {
       ...formData,
       id: Date.now().toString(),
     }
-    // Here you would typically dispatch an action to add the contact to your Redux store
-    console.log('New contact:', newContact)
+
     dispatch(addContact(newContact))
     // Reset form after submission
     setFormData({
@@ -47,11 +55,23 @@ const ContactForm: React.FC = () => {
       sex: '',
       active: '',
     })
+    setAlert('')
   }
 
   return (
-    <div className='w-[70%] h-[80%] p-5 bg-neutral-200 shadow-lg rounded-lg overflow-hidden flex flex-col'>
-      <h1 className='text-2xl font-palanquin font-bold mb-4'>Add Details</h1>
+    <div className='w-[70%] h-[80%] p-5 bg-neutral-200 shadow-lg rounded-lg overflow-auto flex flex-col'>
+      <div className='flex justify-between'>
+        <h1 className='text-2xl font-palanquin font-bold mb-4'>Add Details</h1>
+        <Button
+          primary
+          outline
+          className='px-3'
+          onClick={() => navigate('/contact')}
+        >
+          <FaChevronLeft size={25} />
+        </Button>
+      </div>
+
       <form
         onSubmit={handleSubmit}
         className='flex flex-col gap-4 font-montserrat'
@@ -189,6 +209,7 @@ const ContactForm: React.FC = () => {
           Submit
         </Button>
       </form>
+      {alert && <span className='text-red-600'>&#9888; {alert}</span>}
     </div>
   )
 }

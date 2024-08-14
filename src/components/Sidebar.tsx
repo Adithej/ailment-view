@@ -4,7 +4,7 @@ import { FaChevronRight } from 'react-icons/fa'
 import { useNavigate, useLocation } from 'react-router-dom'
 
 const Sidebar: React.FC = () => {
-  const naviagte = useNavigate()
+  const navigate = useNavigate()
   const location = useLocation()
 
   const isActive = (path: string) => location.pathname.startsWith(path)
@@ -17,7 +17,7 @@ const Sidebar: React.FC = () => {
           className={`w-full rounded-r-lg ${
             isActive('/contact') ? 'bg-neutral-700' : ''
           }`}
-          onClick={() => naviagte('/contact')}
+          onClick={() => navigate('/contact')}
         >
           Contact
           <FaChevronRight className='h-4' />
@@ -28,13 +28,13 @@ const Sidebar: React.FC = () => {
           className={`w-full rounded-r-lg ${
             isActive('/graphs') ? 'bg-neutral-700' : ''
           }`}
-          onClick={() => naviagte('/graphs')}
+          onClick={() => navigate('/graphs')}
         >
           Graphs
           <FaChevronRight className='h-4' />
         </Button>
       </nav>
-      <div className='text-center text-xs text-neutral-800 p-2'>
+      <div className='hidden md:block text-center text-xs text-neutral-800 p-2'>
         <span>Copyright &copy; Ailment View 2024</span>
       </div>
     </section>

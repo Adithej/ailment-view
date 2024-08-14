@@ -6,8 +6,11 @@ const ContactCard: React.FC = () => {
   const naviagte = useNavigate()
 
   return (
-    <div className='w-full max-w-[90%] bg-neutral-200 shadow-lg rounded-lg overflow-hidden min-h-[30%] flex'>
-      <div className='w-1/2 relative'>
+    <div
+      className='w-full max-w-full md:max-w-[90%] bg-neutral-200 shadow-lg rounded-lg 
+      overflow-hidden min-h-[30%] flex flex-col md:flex-row'
+    >
+      <div className='w-full md:w-1/2 relative'>
         <img
           src={illustration}
           alt='Contact illustration'
@@ -15,11 +18,11 @@ const ContactCard: React.FC = () => {
         />
       </div>
 
-      <div className='w-1/2 p-6 flex flex-col justify-center items-center'>
-        <h5 className='mb-4 text-3xl font-bold text-gray-900 font-montserrat'>
+      <div className='w-full md:w-1/2 p-6 flex flex-col justify-center items-center'>
+        <h5 className='mb-4 text-3xl font-bold text-gray-900 font-montserrat text-center md:text-left'>
           Create Contact
         </h5>
-        <p className='mb-6 text-gray-700 font-montserrat'>
+        <p className='mb-6 text-gray-700 font-montserrat text-center md:text-left'>
           Add a new contact to your list by clicking the button below.
         </p>
         <Button

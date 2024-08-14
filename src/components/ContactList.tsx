@@ -7,7 +7,7 @@ const ContactList: React.FC = () => {
   const contacts = useSelector((state: RootState) => state.contact.contacts)
 
   return (
-    <div className='w-full max-w-[90%] bg-white shadow-lg rounded-lg overflow-hidden'>
+    <div className='w-full max-w-full md:max-w-[90%] bg-white shadow-lg rounded-lg overflow-hidden'>
       <div className='px-4 py-5 sm:px-6'>
         <h3 className='text-lg leading-6 font-medium text-gray-900 font-palanquin'>
           Contacts
