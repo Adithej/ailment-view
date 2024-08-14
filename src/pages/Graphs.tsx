@@ -1,4 +1,4 @@
-import { Sidebar } from '../components'
+import { Sidebar, CasesLineGraph, CasesWorldMap } from '../components'
 
 const Graphs = () => {
   return (
@@ -6,7 +6,14 @@ const Graphs = () => {
       <section>
         <Sidebar />
       </section>
-      <section className='bg-stone-300'>Graphs Page</section>
+      <section className='bg-stone-300 flex flex-col h-full gap-5'>
+        <div className='bg-stone-300 flex h-[40%] pl-[10%] pt-6 gap-4 pr-5'>
+          <CasesLineGraph />
+        </div>
+        <div className='h-[55%] pl-[10%] pr-4'>
+          <CasesWorldMap />
+        </div>
+      </section>
     </main>
   )
 }
